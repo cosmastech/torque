@@ -2,9 +2,10 @@ package torque
 
 import (
 	"context"
-	"github.com/gorilla/schema"
 	"net/http"
 	"strings"
+
+	"github.com/gorilla/schema"
 
 	"github.com/pkg/errors"
 )
@@ -18,6 +19,7 @@ var (
 	ErrFormParseFailure      = errors.New("failed to parse form data")
 	ErrFormDecodeFailure     = errors.New("failed to decode form data")
 	ErrFormValidationFailure = errors.New("failed to validate form data")
+	ErrFormHoneypot          = errors.New("failed honeypot validation")
 )
 
 // IsMultipartForm checks the Content-Type header to see if the request is a
